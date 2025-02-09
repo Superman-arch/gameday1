@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Epic App – Rewards</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
-  <!-- Header with personalized greeting -->
   <header>
     <div class="header-content">
       <h1 style="color: var(--primary-orange);">My Epic Rewards</h1>
@@ -18,73 +17,45 @@
     </div>
   </header>
 
-  <!-- Hero Section using the digital pass image -->
-  <section class="hero" style="background-image: url('images/pass.jpg');">
-    <div class="hero-overlay">
-      <h2>Your Season Pass, Reinvented</h2>
-      <p>Transform your experience with gamified rewards and exclusive perks.</p>
+  <!-- Hero Banner Section -->
+  <div class="hero-banner">
+    Unlock Your Mountain Rewards
+  </div>
+
+  <!-- Progress Dashboard -->
+  <section class="progress-dashboard">
+    <div class="points-display">
+      <span id="pointsValue">1000</span> pts
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" style="width: 0%;">0 pts</div>
     </div>
   </section>
 
-  <main>
-    <!-- Points and Achievements Overview -->
-    <section class="points-achievements container">
-      <div class="points-display">
-        <h2>Your Current Points</h2>
-        <p class="points-amount"><span id="pointsValue">1000</span> pts</p>
-        <button id="earnPointsBtn" class="action-btn" style="background-color: var(--primary-orange);">
-          Earn More Points
-        </button>
-      </div>
-      <div class="achievements">
-        <h2>Your Achievements</h2>
-        <ul>
-          <li>
-            <img src="images/achivement.png" alt="Achievement Icon"> First Run Completed
-          </li>
-          <li>
-            <img src="images/achivement.png" alt="Achievement Icon"> 5 Mountain Feedbacks
-          </li>
-          <li>
-            <img src="images/achivement.png" alt="Achievement Icon"> Social Connector Badge
-          </li>
-          <!-- Additional achievements can be added here -->
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rewards Redemption Section -->
-    <section class="rewards-redemption container">
-      <h2>Redeem Your Rewards</h2>
-      <p>Use your points to unlock exclusive offers and discounts.</p>
-      <div class="rewards-grid">
-        <button class="redeem-btn" data-cost="500" data-reward="Lodging Discount" style="border-color: var(--primary-orange);">
-          Redeem Lodging Discount (500 pts)
-        </button>
-        <button class="redeem-btn" data-cost="750" data-reward="Next Season Pass Discount" style="border-color: var(--primary-orange);">
-          Redeem Next Season Pass Discount (750 pts)
-        </button>
-        <!-- Additional reward options can be added here -->
-      </div>
-    </section>
-
-    <!-- Value Proposition Section -->
-    <section class="value-proposition container">
-      <h2>Why Gameday?</h2>
-      <article>
-        <p>
-          Season passes have transformed the ski &amp; snowboard sports industry—but at the cost of personalization.
-          Gameday leverages gamification to reinvigorate your mountain experience, offering achievement-based engagement,
-          live feedback, and dynamic rewards that not only enhance your day on the slopes but also help resorts improve guest satisfaction.
-        </p>
-        <p>
-          With proven success in recreational gaming (think Top Golf and Fantasy Sports) and an emphasis on building lifelong
-          customer relationships, Gameday integrates cutting‑edge technology with the unique demands of season pass holders.
-          Enjoy exclusive perks, live data updates, and be part of a community that shapes the future of the industry.
-        </p>
-      </article>
-    </section>
-  </main>
+  <!-- Reward Cards Section -->
+  <section class="reward-cards">
+    <!-- Reward Card 1: Mountain Resort Discount -->
+    <article class="reward-card">
+      <img src="images/mountain1.png" alt="Mountain Resort Discount" class="reward-img">
+      <h2>Mountain Resort Discount</h2>
+      <p>Get 15% off your next lodging at Mountain Resort.</p>
+      <button class="action-btn redeem-btn" data-cost="500" data-reward="Mountain Resort Discount">Redeem Now</button>
+    </article>
+    <!-- Reward Card 2: Snow Valley Discount -->
+    <article class="reward-card">
+      <img src="images/mountain2.jpg" alt="Snow Valley Discount" class="reward-img">
+      <h2>Snow Valley Discount</h2>
+      <p>Enjoy 20% off on your next season pass at Snow Valley.</p>
+      <button class="action-btn redeem-btn" data-cost="750" data-reward="Snow Valley Discount">Redeem Now</button>
+    </article>
+    <!-- Reward Card 3: Exclusive Perks -->
+    <article class="reward-card">
+      <img src="images/extra-perks.png" alt="Exclusive Perks" class="reward-img">
+      <h2>Exclusive Perks</h2>
+      <p>Unlock VIP experiences on the slopes with bonus rewards.</p>
+      <button class="action-btn" onclick="window.location.href='reward-details.html';">View Details</button>
+    </article>
+  </section>
 
   <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav">
@@ -96,7 +67,6 @@
     </ul>
   </nav>
 
-  <script src="js/auth.js"></script>
+  <script src="js/auth.js?v=2"></script>
 </body>
 </html>
-
