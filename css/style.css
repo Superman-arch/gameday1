@@ -27,6 +27,41 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto; /* Center images */
+}
+
+/* Specific Image Fixes */
+.search-icon {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+.assistant-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pass-card img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}
+
+.resort-logo {
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  display: block;
+}
+
+.favorite-btn img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Header Styles */
@@ -55,6 +90,11 @@ header h2 {
 .header-right {
   display: flex;
   align-items: center;
+}
+
+.header-right {
+  justify-content: flex-end;
+  text-align: right;
 }
 
 .profile-pic {
@@ -188,22 +228,22 @@ main {
 /* Bottom Navigation Bar */
 .bottom-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
   background-color: var(--white);
-  border-top: 1px solid var(--gray);
+  border-top: 2px solid var(--gray);
+  padding: 12px;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  width: 100%;
 }
 
 .bottom-nav ul {
   display: flex;
+  justify-content: space-between;
   width: 100%;
-  justify-content: space-around;
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 .bottom-nav li {
@@ -213,12 +253,14 @@ main {
 
 .bottom-nav a {
   text-decoration: none;
-  color: var(--dark-blue);
   font-weight: bold;
+  color: var(--dark-blue);
+  padding: 10px;
 }
 
 .bottom-nav a.active {
   color: var(--primary-orange);
+  border-bottom: 3px solid var(--primary-orange);
 }
 
 /* Dashboard Styles */
@@ -240,14 +282,16 @@ main {
 /* Rewards & Gamification Screen Styles */
 .points-achievements {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
   margin-bottom: 2rem;
 }
 
 .points-display {
+  text-align: center;
   flex: 1;
-  min-width: 250px;
+  min-width: 300px;
 }
 
 .points-display h2 {
@@ -257,6 +301,7 @@ main {
 .points-amount {
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -288,23 +333,10 @@ main {
 }
 
 .rewards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.redeem-btn {
-  background-color: transparent;
-  border: 2px solid var(--primary-orange);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.redeem-btn:hover {
-  background-color: var(--primary-orange);
-  color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
 }
 
 /* Value Proposition Section */
@@ -322,33 +354,27 @@ main {
 .epic-assistant {
   display: flex;
   align-items: center;
-  gap: 10px;
-}
-
-.assistant-icon {
-  width: 50px;
-  height: 50px;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
 }
 
 /* Resort Selection Screen Styles */
 .resort-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
-  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .resort-card {
+  width: 280px;
   background: var(--white);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.resort-logo {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* More Menu Screen Styles */
