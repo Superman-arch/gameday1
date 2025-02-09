@@ -380,6 +380,39 @@ main {
   margin-bottom: 10px;
 }
 
+/* Achievements Section */
+.achievements-section {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.achievements-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.achievement-card {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.achievement-card p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
 /* "More" Page Enhancements */
 header .logo {
   width: 150px;
@@ -431,4 +464,22 @@ button:hover {
 
 section {
   animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Vail Details Specific (if needed) */
+/* You can add any additional styling for the vail-details page here */
+.vail-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.vail-details h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.vail-details p {
+  margin: 10px 0;
+  font-size: 1rem;
 }
