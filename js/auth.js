@@ -22,6 +22,18 @@
     if (pointsElement) {
       pointsElement.innerText = currentPoints;
     }
+    updateProgressBar();
+  }
+
+  // New: Dynamic progress bar updater
+  function updateProgressBar() {
+    const progressBar = document.querySelector('.progress-bar');
+    if (progressBar) {
+      const threshold = 1000; // Set threshold for demonstration
+      let progressPercentage = Math.min((currentPoints / threshold) * 100, 100);
+      progressBar.style.width = progressPercentage + '%';
+      progressBar.innerText = currentPoints + ' pts';
+    }
   }
 
   function earnPoints() {
@@ -98,7 +110,7 @@
      Event Listener Attachments
   ------------------------------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    // Ensure the points display is updated after the DOM loads.
+    // Update points display (and progress bar) on load
     updatePointsDisplay();
 
     // Login Form (index.html)
