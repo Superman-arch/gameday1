@@ -1,5 +1,3 @@
-/* css/style.css */
-
 /* Root Variables */
 :root {
   --primary-orange: #ff7f00;
@@ -19,7 +17,7 @@
 body {
   font-family: Arial, sans-serif;
   color: var(--dark-blue);
-  background: var(--white);
+  background: linear-gradient(to bottom, #f5f7fa, #ffffff);
   line-height: 1.6;
 }
 
@@ -28,14 +26,14 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto; /* Center images */
+  margin: 0 auto;
 }
 
 /* Specific Image Fixes */
 .search-icon {
-  width: 35px;
-  height: 35px;
-  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
 }
 
 .assistant-icon {
@@ -47,21 +45,18 @@ img {
 .pass-card img {
   width: 100%;
   max-width: 250px;
-  height: auto;
 }
 
 .resort-logo {
   width: 80px;
   height: 80px;
   margin: 10px auto;
-  display: block;
 }
 
 .favorite-btn img {
   width: 40px;
   height: 40px;
-  display: block;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 /* Header Styles */
@@ -104,7 +99,7 @@ header h2 {
   margin-left: 0.5rem;
 }
 
-/* Main Content Styles */
+/* Main Content */
 main {
   padding: 2rem;
 }
@@ -119,29 +114,28 @@ main {
   z-index: 1;
 }
 
-.background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-}
-
+.background-container,
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.background-container {
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.overlay {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
 .login-card {
-  background-color: var(--white);
+  background: var(--white);
   padding: 2rem;
   border: 1px solid var(--gray);
   border-radius: 8px;
@@ -192,7 +186,8 @@ main {
   margin-bottom: 1rem;
 }
 
-.forgot-link {
+.forgot-link,
+.option-link {
   font-size: 0.9rem;
   color: var(--primary-orange);
   text-decoration: none;
@@ -204,14 +199,8 @@ main {
   margin-top: 1rem;
 }
 
-.option-link {
-  font-size: 0.9rem;
-  color: var(--primary-orange);
-  text-decoration: none;
-}
-
 #signInBtn {
-  background-color: var(--primary-orange);
+  background: var(--primary-orange);
   color: var(--white);
   border: none;
   padding: 0.75rem;
@@ -221,7 +210,7 @@ main {
 }
 
 #signInBtn:disabled {
-  background-color: var(--gray);
+  background: var(--gray);
   cursor: not-allowed;
 }
 
@@ -230,7 +219,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--white);
+  background: var(--white);
   border-top: 2px solid var(--gray);
   padding: 12px;
   width: 100%;
@@ -240,8 +229,8 @@ main {
 
 .bottom-nav ul {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
 }
@@ -263,103 +252,42 @@ main {
   border-bottom: 3px solid var(--primary-orange);
 }
 
-/* Dashboard Styles */
+/* Homepage Specific Fixes */
+/* Center the Days Tracked section */
 .days-tracked {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-#trackDaysBtn {
-  background-color: var(--primary-orange);
-  color: var(--white);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-/* Rewards & Gamification Screen Styles */
-.points-achievements {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   margin-bottom: 2rem;
 }
 
-.points-display {
-  text-align: center;
-  flex: 1;
-  min-width: 300px;
-}
-
-.points-display h2 {
-  margin-bottom: 0.5rem;
-}
-
-.points-amount {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.action-btn {
-  background-color: var(--primary-orange);
-  color: var(--white);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.achievements ul {
-  list-style: none;
-  padding: 0;
-}
-
-.achievements li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Rewards Redemption Section */
-.rewards-redemption {
-  margin-bottom: 2rem;
-}
-
-.rewards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-/* Value Proposition Section */
-.value-proposition {
-  background-color: var(--light-blue);
-  padding: 1rem;
-  border-radius: 4px;
-}
-
-.value-proposition article p {
-  margin-bottom: 1rem;
-}
-
-/* Epic Assistant Section (for Home Screen) */
+/* Epic Assistant Section & Search Bar */
 .epic-assistant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.assistant-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
 }
 
-/* Resort Selection Screen Styles */
+/* Center Pass Card */
+.pass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Resort Selection Layout */
 .resort-list {
   display: flex;
   flex-wrap: wrap;
@@ -369,33 +297,88 @@ main {
 }
 
 .resort-card {
-  width: 280px;
+  width: 320px;
   background: var(--white);
-  padding: 15px;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* More Menu Screen Styles */
+/* Rewards Page Layout */
+.points-display {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1.5rem;
+  background: var(--light-blue);
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.achievements img {
+  width: 80px;
+}
+
+/* "More" Page Enhancements */
+header .logo {
+  width: 150px;
+  height: auto;
+}
+
 .menu-section {
-  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-bottom: 2px solid var(--gray);
 }
 
 .menu-section h2 {
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.menu-section ul {
-  list-style: none;
-  padding: 0;
+.menu-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
-.menu-section li {
-  margin-bottom: 0.5rem;
+/* Design Enhancements */
+/* Card Shadows & Borders */
+.pass-card,
+.resort-card,
+.menu-section {
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.menu-section a {
-  text-decoration: none;
-  color: var(--primary-orange);
+/* Button Hover Effects */
+.action-btn,
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.action-btn:hover,
+button:hover {
+  background: var(--dark-blue);
+  transform: scale(1.05);
+}
+
+/* Fade-in Animation for Sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  animation: fadeIn 0.6s ease-in-out;
 }
