@@ -1,0 +1,375 @@
+/* css/style.css */
+
+/* Root Variables */
+:root {
+  --primary-orange: #ff7f00;
+  --dark-blue: #003366;
+  --light-blue: #87cefa;
+  --white: #fff;
+  --gray: #ccc;
+}
+
+/* Global Resets & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--dark-blue);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+/* Global Image Settings */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header Styles */
+header {
+  padding: 1rem;
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1,
+header h2 {
+  margin: 0;
+}
+
+.header-inner {
+  text-align: center;
+}
+
+.app-title {
+  font-size: 1.5rem;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem;
+}
+
+/* Login Screen Styles */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.login-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  flex: 1;
+}
+
+.faceid-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5rem;
+}
+
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.forgot-link {
+  font-size: 0.9rem;
+  color: var(--primary-orange);
+  text-decoration: none;
+}
+
+.extra-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.option-link {
+  font-size: 0.9rem;
+  color: var(--primary-orange);
+  text-decoration: none;
+}
+
+#signInBtn {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#signInBtn:disabled {
+  background-color: var(--gray);
+  cursor: not-allowed;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--white);
+  border-top: 1px solid var(--gray);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+.bottom-nav li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.bottom-nav a.active {
+  color: var(--primary-orange);
+}
+
+/* Dashboard Styles */
+.days-tracked {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#trackDaysBtn {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Rewards & Gamification Screen Styles */
+.points-achievements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.points-display {
+  flex: 1;
+  min-width: 250px;
+}
+
+.points-display h2 {
+  margin-bottom: 0.5rem;
+}
+
+.points-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.action-btn {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Rewards Redemption Section */
+.rewards-redemption {
+  margin-bottom: 2rem;
+}
+
+.rewards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.redeem-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.redeem-btn:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+/* Value Proposition Section */
+.value-proposition {
+  background-color: var(--light-blue);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.value-proposition article p {
+  margin-bottom: 1rem;
+}
+
+/* Epic Assistant Section (for Home Screen) */
+.epic-assistant {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.assistant-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Resort Selection Screen Styles */
+.resort-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 1rem;
+}
+
+.resort-card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resort-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* More Menu Screen Styles */
+.menu-section {
+  margin-bottom: 2rem;
+}
+
+.menu-section h2 {
+  margin-bottom: 1rem;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section li {
+  margin-bottom: 0.5rem;
+}
+
+.menu-section a {
+  text-decoration: none;
+  color: var(--primary-orange);
+}
