@@ -1,3 +1,5 @@
+/* css/style.css */
+
 /* Root Variables */
 :root {
   --primary-orange: #ff7f00;
@@ -253,7 +255,6 @@ main {
 }
 
 /* Homepage Specific Fixes */
-/* Center the Days Tracked section */
 .days-tracked {
   display: flex;
   flex-direction: column;
@@ -261,7 +262,6 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Epic Assistant Section & Search Bar */
 .epic-assistant {
   display: flex;
   flex-direction: column;
@@ -278,7 +278,6 @@ main {
   margin-top: 10px;
 }
 
-/* Center Pass Card */
 .pass-card {
   display: flex;
   flex-direction: column;
@@ -287,45 +286,98 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Resort Selection Layout */
-.resort-list {
+/* Rewards Page Enhancements */
+
+/* Hero Banner */
+.hero-banner {
+  width: 100%;
+  height: 250px;
+  background: url('images/skiing-banner.jpg') center/cover no-repeat;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.resort-card {
-  width: 320px;
-  background: var(--white);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Rewards Page Layout */
-.points-display {
-  text-align: center;
-  font-size: 1.5rem;
+  color: white;
+  font-size: 2rem;
   font-weight: bold;
-  padding: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Progress Dashboard */
+.progress-dashboard {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.points-display {
+  font-size: 1.8rem;
+  font-weight: bold;
   background: var(--light-blue);
+  padding: 1rem;
   border-radius: 8px;
   max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 400px;
+  background: var(--gray);
+  border-radius: 8px;
+  overflow: hidden;
   margin: 0 auto;
 }
 
-.achievements {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 2rem;
+.progress-bar {
+  height: 20px;
+  width: 0%;
+  background: var(--primary-orange);
+  transition: width 0.5s ease-in-out;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  font-weight: bold;
 }
 
-.achievements img {
-  width: 80px;
+/* Reward Cards Section */
+.reward-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.reward-card {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+}
+
+.reward-card h2 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.reward-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.reward-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 /* "More" Page Enhancements */
@@ -353,7 +405,6 @@ header .logo {
 }
 
 /* Design Enhancements */
-/* Card Shadows & Borders */
 .pass-card,
 .resort-card,
 .menu-section {
@@ -361,7 +412,6 @@ header .logo {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Hover Effects */
 .action-btn,
 button {
   transition: background 0.3s ease, transform 0.2s ease;
