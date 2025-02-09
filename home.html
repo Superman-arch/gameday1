@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Epic App – Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <h1 class="app-title">My Epic App</h1>
+    </div>
+    <div class="header-right">
+      <!-- Profile picture and personalized greeting -->
+      <img src="images/deca.png" alt="Profile Picture for Deca" class="profile-pic">
+      <span class="greeting">Welcome, Deca</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Days Tracked Section -->
+    <section class="days-tracked">
+      <h2>Days Tracked</h2>
+      <button id="trackDaysBtn">Track Your Day</button>
+    </section>
+
+    <!-- Epic Assistant Section -->
+    <section class="epic-assistant">
+      <div class="assistant-header">
+        <img src="images/ai.png" alt="Epic Assistant Icon" class="assistant-icon">
+        <h2>My Epic Assistant</h2>
+      </div>
+      <div class="assistant-search">
+        <input type="text" placeholder="Search..." aria-label="Search">
+        <img src="images/search.png" alt="Search Icon" class="search-icon">
+      </div>
+    </section>
+
+    <!-- Digital Pass & Tickets Section -->
+    <section class="pass-tickets">
+      <h2>My Pass & Tickets</h2>
+      <div class="pass-card">
+        <div class="pass-details">
+          <p class="season">Season 24/25</p>
+          <p class="pass-title">EPIC LOCAL PASS</p>
+          <p class="user-name">Deca</p>
+        </div>
+        <div class="pass-status">
+          <!-- A checkmark icon indicates a valid pass -->
+          <img src="images/checkmark.png" alt="Valid Pass" class="checkmark-icon">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="resort.html">Resort</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="more.html">More</a></li>
+    </ul>
+  </nav>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Epic App – Rewards</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header with personalized greeting -->
+  <header>
+    <div class="header-content">
+      <h1 style="color: var(--primary-orange);">My Epic Rewards</h1>
+      <div class="profile-info">
+        <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
+        <span class="greeting">Welcome, Deca!</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section using the digital pass image -->
+  <section class="hero" style="background-image: url('images/pass.jpg');">
+    <div class="hero-overlay">
+      <h2>Your Season Pass, Reinvented</h2>
+      <p>Transform your experience with gamified rewards and exclusive perks.</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Points and Achievements Overview -->
+    <section class="points-achievements container">
+      <div class="points-display">
+        <h2>Your Current Points</h2>
+        <p class="points-amount"><span id="pointsValue">1000</span> pts</p>
+        <button id="earnPointsBtn" class="action-btn" style="background-color: var(--primary-orange);">
+          Earn More Points
+        </button>
+      </div>
+      <div class="achievements">
+        <h2>Your Achievements</h2>
+        <ul>
+          <li>
+            <img src="images/ai.png" alt="Achievement Icon"> First Run Completed
+          </li>
+          <li>
+            <img src="images/ai.png" alt="Achievement Icon"> 5 Mountain Feedbacks
+          </li>
+          <li>
+            <img src="images/ai.png" alt="Achievement Icon"> Social Connector Badge
+          </li>
+          <!-- Additional achievements can be added here -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Rewards Redemption Section -->
+    <section class="rewards-redemption container">
+      <h2>Redeem Your Rewards</h2>
+      <p>Use your points to unlock exclusive offers and discounts.</p>
+      <div class="rewards-grid">
+        <button class="redeem-btn" data-cost="500" data-reward="Lodging Discount" style="border-color: var(--primary-orange);">
+          Redeem Lodging Discount (500 pts)
+        </button>
+        <button class="redeem-btn" data-cost="750" data-reward="Next Season Pass Discount" style="border-color: var(--primary-orange);">
+          Redeem Next Season Pass Discount (750 pts)
+        </button>
+        <!-- Additional reward options can be added here -->
+      </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-proposition container">
+      <h2>Why Gameday?</h2>
+      <article>
+        <p>
+          Season passes have transformed the ski &amp; snowboard sports industry—but at the cost of personalization.
+          Gameday leverages gamification to reinvigorate your mountain experience, offering achievement-based engagement,
+          live feedback, and dynamic rewards that not only enhance your day on the slopes but also help resorts improve guest satisfaction.
+        </p>
+        <p>
+          With proven success in recreational gaming (think Top Golf and Fantasy Sports) and an emphasis on building lifelong
+          customer relationships, Gameday integrates cutting‑edge technology with the unique demands of season pass holders.
+          Enjoy exclusive perks, live data updates, and be part of a community that shapes the future of the industry.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="resort.html">Resort</a></li>
+      <li><a href="rewards.html" class="active">Rewards</a></li>
+      <li><a href="more.html">More</a></li>
+    </ul>
+  </nav>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Epic App – Select a Resort</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Select a Resort</h1>
+    <!-- Close button to return to the Home screen -->
+    <button class="close-btn" onclick="window.location.href='home.html';" aria-label="Close Resort Selection">X</button>
+  </header>
+
+  <main>
+    <!-- Resort Search Bar -->
+    <section class="resort-search">
+      <input type="text" placeholder="Search resorts..." aria-label="Search resorts">
+      <img src="images/search.png" alt="Search Icon" class="search-icon">
+    </section>
+
+    <!-- List of Resort Cards -->
+    <section class="resort-list">
+      <!-- Example Resort Card 1 -->
+      <article class="resort-card">
+        <img src="images/resort-logo1.png" alt="Mountain Resort Logo" class="resort-logo">
+        <div class="resort-info">
+          <h2>Mountain Resort</h2>
+          <p>Location: Aspen, CO</p>
+          <p>Distance: 10 miles</p>
+        </div>
+        <button class="favorite-btn" aria-label="Mark as Favorite">
+          <img src="images/star.png" alt="Favorite Star Icon">
+        </button>
+      </article>
+      <!-- Example Resort Card 2 -->
+      <article class="resort-card">
+        <img src="images/resort-logo2.png" alt="Snow Valley Logo" class="resort-logo">
+        <div class="resort-info">
+          <h2>Snow Valley</h2>
+          <p>Location: Vail, CO</p>
+          <p>Distance: 15 miles</p>
+        </div>
+        <button class="favorite-btn" aria-label="Mark as Favorite">
+          <img src="images/star.png" alt="Favorite Star Icon">
+        </button>
+      </article>
+      <!-- Additional resort cards can be added here -->
+    </section>
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="resort.html" class="active">Resort</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
+      <li><a href="more.html">More</a></li>
+    </ul>
+  </nav>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
