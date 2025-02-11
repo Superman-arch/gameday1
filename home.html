@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Epic App – Home</title>
+  <title>My Epic App – Home | In Partnership with Epic Resorts</title>
+  <meta name="description" content="Experience the ultimate gamified ski adventure with My Epic App in partnership with Epic Resorts. Track your days on the slopes, access exclusive rewards, and more.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header>
     <div class="header-left">
       <h1 class="app-title">My Epic App</h1>
+      <p class="partner-tagline">
+        In Partnership with 
+        <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
+      </p>
     </div>
     <div class="header-right">
       <!-- Profile picture and personalized greeting -->
-      <img src="images/deca.png" alt="Profile Picture for Deca" class="profile-pic">
+      <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
       <span class="greeting">Welcome, Deca</span>
     </div>
   </header>
@@ -22,7 +28,7 @@
     <!-- Days Tracked Section -->
     <section class="days-tracked">
       <h2>Days Tracked</h2>
-      <button id="trackDaysBtn">Track Your Day</button>
+      <button id="trackDaysBtn" aria-label="Track Your Day">Track Your Day</button>
     </section>
 
     <!-- Epic Assistant Section -->
@@ -32,14 +38,15 @@
         <h2>My Epic Assistant</h2>
       </div>
       <div class="assistant-search">
-        <input type="text" placeholder="Search..." aria-label="Search">
+        <label for="assistantSearch" class="visually-hidden">Search</label>
+        <input type="text" id="assistantSearch" placeholder="Search..." aria-label="Search">
         <img src="images/search.png" alt="Search Icon" class="search-icon">
       </div>
     </section>
 
     <!-- Digital Pass & Tickets Section -->
     <section class="pass-tickets">
-      <h2>My Pass & Tickets</h2>
+      <h2>My Pass &amp; Tickets</h2>
       <div class="pass-card">
         <div class="pass-details">
           <p class="season">Season 24/25</p>
@@ -48,14 +55,14 @@
         </div>
         <div class="pass-status">
           <!-- A checkmark icon indicates a valid pass -->
-          <img src="images/checkmark.png" alt="Valid Pass" class="checkmark-icon">
+          <img src="images/checkmark.png" alt="Valid Pass Checkmark" class="checkmark-icon">
         </div>
       </div>
     </section>
   </main>
 
   <!-- Bottom Navigation Bar -->
-  <nav class="bottom-nav">
+  <nav class="bottom-nav" aria-label="Main Navigation">
     <ul>
       <li><a href="home.html" class="active">Home</a></li>
       <li><a href="resort.html">Resort</a></li>
