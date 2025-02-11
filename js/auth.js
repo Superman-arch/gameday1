@@ -1,50 +1,68 @@
 // js/auth.js
+"use strict";
 
 (function () {
   // ---------------------------
   // Points Persistence Helpers
   // ---------------------------
-  function getCurrentPoints() {
-    return parseInt(localStorage.getItem("currentPoints"), 10) || 1000;
-  }
+  /**
+   * Retrieves the current points from localStorage.
+   * @returns {number} The current points (defaulting to 1000 if not set).
+   */
+  const getCurrentPoints = () => parseInt(localStorage.getItem("currentPoints"), 10) || 1000;
 
-  function setCurrentPoints(points) {
-    localStorage.setItem("currentPoints", points);
-  }
+  /**
+   * Persists the current points value to localStorage.
+   * @param {number} points - The points value to set.
+   */
+  const setCurrentPoints = (points) => localStorage.setItem("currentPoints", points);
 
   let currentPoints = getCurrentPoints();
 
-  /* -------------------------------------
-     Rewards Functions
-  ------------------------------------- */
-  function updatePointsDisplay() {
+  // -------------------------------------
+  // Rewards Functions
+  // -------------------------------------
+
+  /**
+   * Updates the points display and progress bar.
+   */
+  const updatePointsDisplay = () => {
     const pointsElement = document.getElementById("pointsValue");
     if (pointsElement) {
       pointsElement.innerText = currentPoints;
     }
     updateProgressBar();
-  }
+  };
 
-  // New: Dynamic progress bar updater
-  function updateProgressBar() {
+  /**
+   * Dynamically updates the progress bar based on current points.
+   */
+  const updateProgressBar = () => {
     const progressBar = document.querySelector('.progress-bar');
     if (progressBar) {
-      const threshold = 1000; // Set threshold for demonstration
-      let progressPercentage = Math.min((currentPoints / threshold) * 100, 100);
-      progressBar.style.width = progressPercentage + '%';
-      progressBar.innerText = currentPoints + ' pts';
+      const threshold = 1000; // Threshold for demonstration purposes.
+      const progressPercentage = Math.min((currentPoints / threshold) * 100, 100);
+      progressBar.style.width = `${progressPercentage}%`;
+      progressBar.innerText = `${currentPoints} pts`;
     }
-  }
+  };
 
-  function earnPoints() {
+  /**
+   * Increases the current points by 100 and updates the display.
+   */
+  const earnPoints = () => {
     currentPoints += 100;
     setCurrentPoints(currentPoints);
     updatePointsDisplay();
     alert("You earned 100 points!");
-    console.log("Points increased. Current points:", currentPoints);
-  }
+    console.info("Points increased. Current points:", currentPoints);
+  };
 
-  function redeemReward(event) {
+  /**
+   * Handles the redemption of a reward.
+   * @param {Event} event - The click event from a reward redemption button.
+   */
+  const redeemReward = (event) => {
     const button = event.currentTarget;
     const cost = parseInt(button.getAttribute("data-cost"), 10);
     const rewardName = button.getAttribute("data-reward");
@@ -58,18 +76,23 @@
       currentPoints -= cost;
       setCurrentPoints(currentPoints);
       updatePointsDisplay();
-      alert("Congratulations! You have redeemed: " + rewardName);
-      console.log(`Redeemed "${rewardName}". Points remaining:`, currentPoints);
+      alert(`Congratulations! You have redeemed: ${rewardName}`);
+      console.info(`Redeemed "${rewardName}". Points remaining:`, currentPoints);
     } else {
-      alert("Insufficient points to redeem " + rewardName + ".");
-      console.log("Redemption failed for:", rewardName);
+      alert(`Insufficient points to redeem ${rewardName}.`);
+      console.info("Redemption failed for:", rewardName);
     }
-  }
+  };
 
-  /* -------------------------------------
-     Login Authentication Functions
-  ------------------------------------- */
-  function validateLogin(event) {
+  // -------------------------------------
+  // Login Authentication Functions
+  // -------------------------------------
+
+  /**
+   * Validates login credentials and redirects on success.
+   * @param {Event} event - The form submission event.
+   */
+  const validateLogin = (event) => {
     event.preventDefault();
 
     const emailInput = document.getElementById("email");
@@ -79,15 +102,19 @@
     const email = emailInput.value.trim().toLowerCase();
     const password = passwordInput.value;
 
+    // Simple credentials check (for demonstration purposes)
     if (email === "deca@gmail.com" && password === "deca") {
       window.location.href = "home.html";
     } else {
       errorMsg.textContent = "Invalid email or password. Please try again.";
-      console.log("Login failed: invalid credentials.");
+      console.warn("Login failed: invalid credentials.");
     }
-  }
+  };
 
-  function checkFormInputs() {
+  /**
+   * Enables or disables the sign-in button based on input field values.
+   */
+  const checkFormInputs = () => {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const signInBtn = document.getElementById("signInBtn");
@@ -96,24 +123,28 @@
       signInBtn.disabled =
         emailInput.value.trim() === "" || passwordInput.value.trim() === "";
     }
-  }
+  };
 
-  /* -------------------------------------
-     Additional Interaction Functions
-  ------------------------------------- */
-  function trackDay() {
+  // -------------------------------------
+  // Additional Interaction Functions
+  // -------------------------------------
+
+  /**
+   * Handles tracking a user's day (demo function).
+   */
+  const trackDay = () => {
     alert("Your day has been tracked!");
-    console.log("Track day button clicked.");
-  }
+    console.info("Track day button clicked.");
+  };
 
-  /* -------------------------------------
-     Event Listener Attachments
-  ------------------------------------- */
-  document.addEventListener("DOMContentLoaded", function () {
-    // Update points display (and progress bar) on load
+  // -------------------------------------
+  // Event Listener Attachments
+  // -------------------------------------
+  document.addEventListener("DOMContentLoaded", () => {
+    // Update points display (and progress bar) on page load
     updatePointsDisplay();
 
-    // Login Form (index.html)
+    // Login Form functionality
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
       loginForm.addEventListener("submit", validateLogin);
@@ -125,19 +156,19 @@
       }
     }
 
-    // Track Day Button (home.html)
+    // Track Day Button (for home.html)
     const trackDaysBtn = document.getElementById("trackDaysBtn");
     if (trackDaysBtn) {
       trackDaysBtn.addEventListener("click", trackDay);
     }
 
-    // Earn Points Button (rewards.html)
+    // Earn Points Button (if present in rewards.html)
     const earnPointsBtn = document.getElementById("earnPointsBtn");
     if (earnPointsBtn) {
       earnPointsBtn.addEventListener("click", earnPoints);
     }
 
-    // Reward Redemption Buttons (rewards.html)
+    // Reward Redemption Buttons (for rewards.html)
     const redeemButtons = document.querySelectorAll(".redeem-btn");
     if (redeemButtons.length > 0) {
       redeemButtons.forEach((button) => {
