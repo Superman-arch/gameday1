@@ -1,6 +1,8 @@
 /* css/style.css */
 
-/* Root Variables */
+/*--------------------------------------------------------------
+# Root Variables
+--------------------------------------------------------------*/
 :root {
   --primary-orange: #ff7f00;
   --dark-blue: #003366;
@@ -9,7 +11,9 @@
   --gray: #ccc;
 }
 
-/* Global Resets & Base Styles */
+/*--------------------------------------------------------------
+# Global Resets & Base Styles
+--------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,13 +21,27 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--dark-blue);
   background: linear-gradient(to bottom, #f5f7fa, #ffffff);
   line-height: 1.6;
 }
 
-/* Global Image Settings */
+/* Utility: Visually Hidden (for accessibility) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*--------------------------------------------------------------
+# Global Image Settings
+--------------------------------------------------------------*/
 img {
   max-width: 100%;
   height: auto;
@@ -61,18 +79,16 @@ img {
   margin: 10px auto;
 }
 
-/* Header Styles */
+/*--------------------------------------------------------------
+# Header Styles
+--------------------------------------------------------------*/
 header {
   padding: 1rem;
   background-color: var(--light-blue);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-header h1,
-header h2 {
-  margin: 0;
+  flex-wrap: wrap;
 }
 
 .header-inner {
@@ -101,12 +117,18 @@ header h2 {
   margin-left: 0.5rem;
 }
 
-/* Main Content */
+/*--------------------------------------------------------------
+# Main Content & Containers
+--------------------------------------------------------------*/
 main {
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Login Screen Styles */
+/*--------------------------------------------------------------
+# Login Screen Styles
+--------------------------------------------------------------*/
 .login-section {
   display: flex;
   justify-content: center;
@@ -165,6 +187,12 @@ main {
   border: 1px solid var(--gray);
   border-radius: 4px;
   width: 100%;
+  transition: border 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-orange);
 }
 
 .password-container {
@@ -193,6 +221,12 @@ main {
   font-size: 0.9rem;
   color: var(--primary-orange);
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.forgot-link:hover,
+.option-link:hover {
+  color: var(--dark-blue);
 }
 
 .extra-options {
@@ -208,7 +242,12 @@ main {
   padding: 0.75rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#signInBtn:hover:not(:disabled) {
+  background: var(--dark-blue);
+  transform: scale(1.02);
 }
 
 #signInBtn:disabled {
@@ -216,7 +255,9 @@ main {
   cursor: not-allowed;
 }
 
-/* Bottom Navigation Bar */
+/*--------------------------------------------------------------
+# Bottom Navigation Bar
+--------------------------------------------------------------*/
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
@@ -227,6 +268,8 @@ main {
   width: 100%;
   position: fixed;
   bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .bottom-nav ul {
@@ -247,14 +290,18 @@ main {
   font-weight: bold;
   color: var(--dark-blue);
   padding: 10px;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
-.bottom-nav a.active {
+.bottom-nav a.active,
+.bottom-nav a:hover {
   color: var(--primary-orange);
   border-bottom: 3px solid var(--primary-orange);
 }
 
-/* Homepage Specific Fixes */
+/*--------------------------------------------------------------
+# Homepage Specific Styles
+--------------------------------------------------------------*/
 .days-tracked {
   display: flex;
   flex-direction: column;
@@ -278,15 +325,19 @@ main {
   margin-top: 10px;
 }
 
+/* Centering the pass card and adding spacing */
 .pass-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 
-/* Rewards Page Enhancements */
+/*--------------------------------------------------------------
+# Rewards Page Enhancements
+--------------------------------------------------------------*/
 
 /* Hero Banner */
 .hero-banner {
@@ -296,7 +347,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
@@ -336,7 +387,7 @@ main {
   transition: width 0.5s ease-in-out;
   text-align: center;
   line-height: 20px;
-  color: white;
+  color: var(--white);
   font-weight: bold;
 }
 
@@ -413,7 +464,9 @@ main {
   margin-top: 8px;
 }
 
-/* "More" Page Enhancements */
+/*--------------------------------------------------------------
+# "More" Page Enhancements
+--------------------------------------------------------------*/
 header .logo {
   width: 150px;
   height: auto;
@@ -437,7 +490,9 @@ header .logo {
   font-size: 1.1rem;
 }
 
-/* Design Enhancements */
+/*--------------------------------------------------------------
+# Shared Element Enhancements
+--------------------------------------------------------------*/
 .pass-card,
 .resort-card,
 .menu-section {
@@ -445,9 +500,11 @@ header .logo {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Button & Action Link Styling */
 .action-btn,
 button {
   transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .action-btn:hover,
@@ -456,7 +513,9 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Fade-in Animation for Sections */
+/*--------------------------------------------------------------
+# Fade-in Animation for Sections
+--------------------------------------------------------------*/
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -466,8 +525,9 @@ section {
   animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Vail Details Specific (if needed) */
-/* You can add any additional styling for the vail-details page here */
+/*--------------------------------------------------------------
+# Vail Details Specific
+--------------------------------------------------------------*/
 .vail-details {
   max-width: 800px;
   margin: 0 auto;
@@ -482,4 +542,32 @@ section {
 .vail-details p {
   margin: 10px 0;
   font-size: 1rem;
+}
+
+/*--------------------------------------------------------------
+# Responsive Media Queries
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-left,
+  .header-right {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .assistant-search {
+    max-width: 90%;
+  }
+  
+  .bottom-nav ul {
+    flex-direction: column;
+  }
+  
+  .bottom-nav li {
+    margin: 5px 0;
+  }
 }
