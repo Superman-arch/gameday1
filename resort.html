@@ -3,95 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Epic App – Rewards | In Partnership with Epic Resorts</title>
-  <meta name="description" content="Earn and redeem exclusive rewards with My Epic App. Track your progress, unlock achievements, and enjoy special discounts on Epic Resorts experiences.">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <title>My Epic App – Select a Resort | In Partnership with Epic Resorts</title>
+  <meta name="description" content="Select your preferred resort and explore exclusive deals in partnership with Epic Resorts.">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header>
-    <div class="header-content">
-      <h1 style="color: var(--primary-orange);">My Epic Rewards</h1>
-      <div class="profile-info">
-        <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
-        <span class="greeting">Welcome, Deca!</span>
-      </div>
-      <p class="partner-tagline">
-        In Partnership with 
-        <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
-      </p>
-    </div>
+    <h1>Select a Resort</h1>
+    <p class="partner-tagline">
+      In Partnership with 
+      <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
+    </p>
+    <!-- Close button to return to the Home screen -->
+    <button class="close-btn" onclick="window.location.href='home.html';" aria-label="Close Resort Selection">X</button>
   </header>
 
-  <!-- Hero Banner Section -->
-  <div class="hero-banner" role="banner">
-    <h2>Unlock Your Mountain Rewards</h2>
-  </div>
+  <main>
+    <!-- Resort Search Bar -->
+    <section class="resort-search">
+      <label for="resortSearch" class="visually-hidden">Search resorts</label>
+      <input type="text" id="resortSearch" placeholder="Search resorts..." aria-label="Search resorts">
+      <img src="images/search.png" alt="Search Icon" class="search-icon">
+    </section>
 
-  <!-- Progress Dashboard -->
-  <section class="progress-dashboard" aria-label="Progress Dashboard">
-    <div class="points-display">
-      <span id="pointsValue">1000</span> pts
-    </div>
-    <div class="progress-container">
-      <div class="progress-bar" style="width: 0%;">0 pts</div>
-    </div>
-  </section>
-
-  <!-- Reward Cards Section -->
-  <section class="reward-cards" aria-label="Available Rewards">
-    <!-- Reward Card 1: Mountain Resort Discount -->
-    <article class="reward-card">
-      <img src="images/mountain1.png" alt="Mountain Resort Discount" class="reward-img">
-      <h2>Mountain Resort Discount</h2>
-      <p>Get 15% off your next lodging at Mountain Resort.</p>
-      <button class="action-btn redeem-btn" data-cost="500" data-reward="Mountain Resort Discount" aria-label="Redeem Mountain Resort Discount for 500 points">Redeem Now</button>
-    </article>
-    <!-- Reward Card 2: Snow Valley Discount -->
-    <article class="reward-card">
-      <img src="images/mountain2.jpg" alt="Snow Valley Discount" class="reward-img">
-      <h2>Snow Valley Discount</h2>
-      <p>Enjoy 20% off on your next season pass at Snow Valley.</p>
-      <button class="action-btn redeem-btn" data-cost="750" data-reward="Snow Valley Discount" aria-label="Redeem Snow Valley Discount for 750 points">Redeem Now</button>
-    </article>
-    <!-- Reward Card 3: Exclusive Perks -->
-    <article class="reward-card">
-      <img src="images/extra-perks.jpg" alt="Exclusive Perks" class="reward-img">
-      <h2>Exclusive Perks</h2>
-      <p>Unlock VIP experiences on the slopes with bonus rewards.</p>
-      <button class="action-btn" onclick="window.location.href='vail-details.html';" aria-label="View Exclusive Perks Details">View Details</button>
-    </article>
-  </section>
-
-  <!-- Achievements Section -->
-  <section class="achievements-section" aria-label="Your Achievements">
-    <h2>Your Achievements</h2>
-    <div class="achievements-grid">
-      <article class="achievement-card">
-        <img src="images/achivement.png" alt="First Run Completed Badge" class="achievement-img">
-        <p>First Run Completed</p>
+    <!-- List of Resort Cards -->
+    <section class="resort-list" aria-label="Resort List">
+      <!-- Example Resort Card 1 -->
+      <article class="resort-card">
+        <img src="images/mountain1.png" alt="Mountain Resort Logo" class="resort-logo">
+        <div class="resort-info">
+          <h2>Mountain Resort</h2>
+          <p>Location: Aspen, CO</p>
+          <p>Distance: 10 miles</p>
+        </div>
+        <button class="favorite-btn" aria-label="Mark Mountain Resort as Favorite">
+          <img src="images/star.png" alt="Favorite Star Icon">
+        </button>
       </article>
-      <article class="achievement-card">
-        <img src="images/achivement.png" alt="5 Mountain Feedbacks Badge" class="achievement-img">
-        <p>5 Mountain Feedbacks</p>
+      <!-- Example Resort Card 2 -->
+      <article class="resort-card">
+        <img src="images/mountain2.jpg" alt="Snow Valley Logo" class="resort-logo">
+        <div class="resort-info">
+          <h2>Snow Valley</h2>
+          <p>Location: Vail, CO</p>
+          <p>Distance: 15 miles</p>
+        </div>
+        <button class="favorite-btn" aria-label="Mark Snow Valley as Favorite">
+          <img src="images/star.png" alt="Favorite Star Icon">
+        </button>
       </article>
-      <article class="achievement-card">
-        <img src="images/achivement.png" alt="Social Connector Badge" class="achievement-img">
-        <p>Social Connector Badge</p>
-      </article>
-    </div>
-  </section>
+      <!-- Additional resort cards can be added here -->
+    </section>
+  </main>
 
   <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav" aria-label="Main Navigation">
     <ul>
       <li><a href="home.html">Home</a></li>
-      <li><a href="resort.html">Resort</a></li>
-      <li><a href="rewards.html" class="active">Rewards</a></li>
+      <li><a href="resort.html" class="active">Resort</a></li>
+      <li><a href="rewards.html">Rewards</a></li>
       <li><a href="more.html">More</a></li>
     </ul>
   </nav>
 
-  <script src="js/auth.js?v=3"></script>
+  <script src="js/auth.js"></script>
 </body>
 </html>
