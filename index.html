@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Epic App – Login</title>
+  <title>My Epic App – Login | In Partnership with Vail Resorts</title>
+  <meta name="description" content="Login to My Epic App, your gateway to exclusive rewards and experiences on the slopes, in partnership with Epic Resorts.">
   <link rel="stylesheet" href="css/style.css">
-  <!--
-    In your style.css, define variables such as:
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <!-- CSS Variables can be defined in style.css, e.g.:
     :root {
       --primary-orange: #FF7F00;
       --dark-blue: #003366;
@@ -18,7 +19,7 @@
 </head>
 <body>
   <!-- Full-screen background image with an overlay -->
-  <div class="background-container" style="background-image: url('background.jpg');">
+  <div class="background-container" style="background-image: url('images/background.jpg');">
     <div class="overlay"></div>
   </div>
 
@@ -26,24 +27,29 @@
     <div class="header-inner">
       <!-- Epic logo styled with your primary orange accent -->
       <h1 class="logo" style="color: var(--primary-orange);">Epic</h1>
-      <h2 class="title">Unlock the mountain</h2>
+      <p class="partner-tagline">
+        In Partnership with 
+        <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
+      </p>
+      <h2 class="title">Unlock the Mountain</h2>
     </div>
   </header>
 
   <main>
     <section class="login-section">
-      <div class="login-card">
+      <div class="login-card" role="form" aria-labelledby="loginFormTitle">
+        <h3 id="loginFormTitle" class="visually-hidden">Login to My Epic App</h3>
         <!-- Login Form -->
         <form id="loginForm" action="#" method="post" novalidate>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="deca@gmail.com" required>
+            <input type="email" id="email" name="email" value="deca@gmail.com" required aria-required="true">
           </div>
           <div class="form-group">
             <label for="password">Password</label>
             <!-- Container for the password input and embedded Face ID icon -->
             <div class="password-container">
-              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true">
               <img src="images/faceid.png" alt="Face ID Icon" class="faceid-icon">
             </div>
           </div>
