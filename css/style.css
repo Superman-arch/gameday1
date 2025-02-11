@@ -299,6 +299,22 @@ main {
   border-bottom: 3px solid var(--primary-orange);
 }
 
+/* Add Navigation Icons via Pseudo-elements */
+.bottom-nav a::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+}
+
+.bottom-nav a[href="home.html"]::before { background-image: url('icons/home.svg'); }
+.bottom-nav a[href="resort.html"]::before { background-image: url('icons/resort.svg'); }
+.bottom-nav a[href="rewards.html"]::before { background-image: url('icons/rewards.svg'); }
+.bottom-nav a[href="more.html"]::before { background-image: url('icons/more.svg'); }
+
 /*--------------------------------------------------------------
 # Homepage Specific Fixes (Grid Layout & Hero Banner)
 --------------------------------------------------------------*/
@@ -369,10 +385,9 @@ main {
   outline: none;
 }
 
+/* Hide any image element inside the assistant-search container */
 .assistant-search img {
-  width: 24px;
-  height: 24px;
-  margin-left: 8px;
+  display: none !important;
 }
 
 /* Digital Pass & Tickets Section */
