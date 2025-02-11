@@ -5,7 +5,6 @@
 --------------------------------------------------------------*/
 :root {
   --primary-orange: #ff7f00;
-  --primary-orange-hover: #e66e00; /* For hover states */
   --dark-blue: #003366;
   --light-blue: #87cefa;
   --white: #fff;
@@ -300,46 +299,29 @@ main {
   border-bottom: 3px solid var(--primary-orange);
 }
 
-/* Navigation Icons */
-.bottom-nav a::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-bottom: 5px;
-}
-
-.bottom-nav a[href="home.html"]::before { background-image: url('icons/home.svg'); }
-.bottom-nav a[href="resort.html"]::before { background-image: url('icons/resort.svg'); }
-.bottom-nav a[href="rewards.html"]::before { background-image: url('icons/rewards.svg'); }
-.bottom-nav a[href="more.html"]::before { background-image: url('icons/more.svg'); }
-
 /*--------------------------------------------------------------
-# Homepage Specific Layout (Grid Layout)
+# Homepage Specific Fixes (Grid Layout & Hero Banner)
 --------------------------------------------------------------*/
+
+/* Homepage Grid Layout */
 .homepage-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto;
   gap: 20px;
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
-/* Days Tracked Section spanning full width */
+/* Days Tracked Section - Center it across both columns */
 .days-tracked {
   grid-column: span 2;
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-# Hero Banner with Overlay
---------------------------------------------------------------*/
+/* Hero Banner */
 .hero-banner {
-  position: relative;
   width: 100%;
   height: 250px;
   background: url('images/hero-ski.jpg') center/cover no-repeat;
@@ -353,29 +335,7 @@ main {
   margin-bottom: 20px;
 }
 
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/*--------------------------------------------------------------
-# Section Divider
---------------------------------------------------------------*/
-.section-divider {
-  width: 80%;
-  height: 1px;
-  background: var(--gray);
-  margin: 20px auto;
-}
-
-/*--------------------------------------------------------------
-# Epic Assistant Section
---------------------------------------------------------------*/
+/* Epic Assistant Section */
 .epic-assistant {
   display: flex;
   flex-direction: column;
@@ -383,6 +343,7 @@ main {
   text-align: center;
 }
 
+/* Improved Epic Assistant Search Bar */
 .assistant-search {
   display: flex;
   align-items: center;
@@ -390,7 +351,7 @@ main {
   width: 100%;
   max-width: 400px;
   margin-top: 10px;
-  background: #fff;
+  background: var(--white);
   border-radius: 20px;
   padding: 8px 12px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -414,9 +375,7 @@ main {
   margin-left: 8px;
 }
 
-/*--------------------------------------------------------------
-# Digital Pass & Tickets Section
---------------------------------------------------------------*/
+/* Digital Pass & Tickets Section */
 .pass-tickets {
   display: flex;
   flex-direction: column;
@@ -424,47 +383,187 @@ main {
   text-align: center;
 }
 
+/* Pass Card UI - Revised */
 .pass-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 350px;
-  background: linear-gradient(135deg, #ffffff, #f8f8f8);
+  background: var(--white);
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease-in-out;
 }
 
-.pass-card:hover {
-  transform: translateY(-5px);
-}
-
+/* Increase Pass Image Size in Pass Card */
 .pass-card img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   border-radius: 8px;
   margin-top: 10px;
 }
 
 /*--------------------------------------------------------------
-# "Track Your Day" Button Styling
+# Rewards Page Enhancements
 --------------------------------------------------------------*/
-#trackDaysBtn {
-  background-color: var(--primary-orange);
-  color: var(--white);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+
+/* Progress Dashboard */
+.progress-dashboard {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
-#trackDaysBtn:hover {
-  background-color: var(--primary-orange-hover);
+.points-display {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: var(--light-blue);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 400px;
+  background: var(--gray);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0%;
+  background: var(--primary-orange);
+  transition: width 0.5s ease-in-out;
+  text-align: center;
+  line-height: 20px;
+  color: var(--white);
+  font-weight: bold;
+}
+
+/* Reward Cards Section */
+.reward-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.reward-card {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+}
+
+.reward-card h2 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.reward-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.reward-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* Achievements Section */
+.achievements-section {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.achievements-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.achievement-card {
+  background: var(--white);
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.achievement-card p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+/*--------------------------------------------------------------
+# "More" Page Enhancements
+--------------------------------------------------------------*/
+header .logo {
+  width: 150px;
+  height: auto;
+}
+
+.menu-section {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-bottom: 2px solid var(--gray);
+}
+
+.menu-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.menu-section ul li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/*--------------------------------------------------------------
+# Shared Element Enhancements
+--------------------------------------------------------------*/
+.pass-card,
+.resort-card,
+.menu-section {
+  border: 1px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button & Action Link Styling */
+.action-btn,
+button {
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.action-btn:hover,
+button:hover {
+  background: var(--dark-blue);
   transform: scale(1.05);
 }
 
@@ -481,7 +580,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Vail Details Specific (if applicable)
+# Vail Details Specific
 --------------------------------------------------------------*/
 .vail-details {
   max-width: 800px;
