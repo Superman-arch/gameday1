@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vail Resort Details – Food & Experiences</title>
+  <title>Vail Resort Details – Food & Experiences | In Partnership with Epic Resorts</title>
+  <meta name="description" content="Explore Vail Resort's exclusive food, dining, and on-mountain experiences. Enjoy gourmet dining, guided tours, and special offers available to Epic App members.">
   <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header>
     <div class="header-content">
       <h1 style="color: var(--primary-orange);">Vail Resort Experiences</h1>
+      <p class="partner-tagline">
+        In Partnership with 
+        <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
+      </p>
       <div class="profile-info">
         <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
         <span class="greeting">Welcome, Deca!</span>
@@ -18,14 +24,14 @@
   </header>
 
   <!-- Hero Banner for Vail Details -->
-  <div class="hero-banner" style="background: url('images/vail-banner.jpg') center/cover no-repeat;">
-    Discover Vail's Best
+  <div class="hero-banner" style="background: url('images/vail-banner.jpg') center/cover no-repeat;" role="banner">
+    <h2>Discover Vail's Best</h2>
   </div>
 
   <!-- Content Section -->
   <main>
-    <section class="vail-details">
-      <h2>Food & Dining</h2>
+    <section class="vail-details" aria-label="Vail Resort Details">
+      <h2>Food &amp; Dining</h2>
       <p>Experience gourmet dining on the slopes. Vail Resorts offers exclusive discounts on select restaurants featuring locally sourced ingredients and diverse culinary options to suit every palate.</p>
       
       <h2>On-Mountain Experiences</h2>
@@ -35,12 +41,12 @@
       <p>Unlock special offers on ski rentals, lessons, and spa treatments. Enjoy luxury and adventure at unbeatable values exclusively for our members.</p>
       
       <!-- Back to Rewards Page -->
-      <button class="action-btn" onclick="window.location.href='rewards.html';">Back to Rewards</button>
+      <button class="action-btn" onclick="window.location.href='rewards.html';" aria-label="Back to Rewards">Back to Rewards</button>
     </section>
   </main>
 
   <!-- Bottom Navigation Bar -->
-  <nav class="bottom-nav">
+  <nav class="bottom-nav" aria-label="Main Navigation">
     <ul>
       <li><a href="home.html">Home</a></li>
       <li><a href="resort.html">Resort</a></li>
