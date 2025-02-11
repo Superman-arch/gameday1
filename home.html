@@ -12,10 +12,6 @@
   <header>
     <div class="header-left">
       <h1 class="app-title">My Epic App</h1>
-      <p class="partner-tagline">
-        In Partnership with 
-        <img src="images/epic-resorts-logo.png" alt="Epic Resorts Logo" class="partner-logo">
-      </p>
     </div>
     <div class="header-right">
       <!-- Profile picture and personalized greeting -->
@@ -25,40 +21,46 @@
   </header>
 
   <main>
-    <!-- Days Tracked Section -->
-    <section class="days-tracked">
-      <h2>Days Tracked</h2>
-      <button id="trackDaysBtn" aria-label="Track Your Day">Track Your Day</button>
-    </section>
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      Unlock the Mountain – Your Skiing Adventure Starts Here!
+    </div>
 
-    <!-- Epic Assistant Section -->
-    <section class="epic-assistant">
-      <div class="assistant-header">
-        <img src="images/ai.png" alt="Epic Assistant Icon" class="assistant-icon">
-        <h2>My Epic Assistant</h2>
-      </div>
-      <div class="assistant-search">
-        <label for="assistantSearch" class="visually-hidden">Search</label>
-        <input type="text" id="assistantSearch" placeholder="Search..." aria-label="Search">
-        <img src="images/search.png" alt="Search Icon" class="search-icon">
-      </div>
-    </section>
+    <!-- Homepage Container using CSS Grid -->
+    <div class="homepage-container">
+      <!-- Days Tracked Section (spanning full width) -->
+      <section class="days-tracked">
+        <h2>Days Tracked</h2>
+        <button id="trackDaysBtn">Track Your Day</button>
+      </section>
 
-    <!-- Digital Pass & Tickets Section -->
-    <section class="pass-tickets">
-      <h2>My Pass &amp; Tickets</h2>
-      <div class="pass-card">
-        <div class="pass-details">
-          <p class="season">Season 24/25</p>
-          <p class="pass-title">EPIC LOCAL PASS</p>
-          <p class="user-name">Deca</p>
+      <!-- Epic Assistant Section (Left Side) -->
+      <section class="epic-assistant">
+        <div class="assistant-header">
+          <img src="images/ai.png" alt="Epic Assistant Icon" class="assistant-icon">
+          <h2>My Epic Assistant</h2>
         </div>
-        <div class="pass-status">
-          <!-- A checkmark icon indicates a valid pass -->
-          <img src="images/checkmark.png" alt="Valid Pass Checkmark" class="checkmark-icon">
+        <div class="assistant-search">
+          <input type="text" placeholder="Ask My Epic Assistant..." aria-label="Ask My Epic Assistant">
+          <img src="images/search-icon.png" alt="Search Icon">
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Digital Pass & Tickets Section (Right Side) -->
+      <section class="pass-tickets">
+        <h2>My Pass &amp; Tickets</h2>
+        <div class="pass-card">
+          <div class="pass-details">
+            <p class="season">Season 24/25</p>
+            <p class="pass-title">EPIC LOCAL PASS</p>
+            <p class="user-name">Deca</p>
+          </div>
+          <div class="pass-status">
+            <img src="images/checkmark.png" alt="Valid Pass Checkmark" class="checkmark-icon">
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <!-- Bottom Navigation Bar -->
