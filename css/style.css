@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--dark-blue);
   background: linear-gradient(to bottom, #f5f7fa, #ffffff);
   line-height: 1.6;
@@ -118,7 +118,7 @@ header {
 }
 
 /*--------------------------------------------------------------
-# Main Content & Containers
+# Main Content
 --------------------------------------------------------------*/
 main {
   padding: 2rem;
@@ -290,7 +290,7 @@ main {
   font-weight: bold;
   color: var(--dark-blue);
   padding: 10px;
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .bottom-nav a.active,
@@ -300,50 +300,31 @@ main {
 }
 
 /*--------------------------------------------------------------
-# Homepage Specific Styles
+# Homepage Specific Fixes (Grid Layout & Hero Banner)
 --------------------------------------------------------------*/
+
+/* Homepage Grid Layout */
+.homepage-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Days Tracked Section - Center it across both columns */
 .days-tracked {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.epic-assistant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.assistant-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 10px;
-}
-
-/* Centering the pass card and adding spacing */
-.pass-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-column: span 2;
   text-align: center;
-  margin-bottom: 2rem;
-  padding: 1rem;
 }
-
-/*--------------------------------------------------------------
-# Rewards Page Enhancements
---------------------------------------------------------------*/
 
 /* Hero Banner */
 .hero-banner {
   width: 100%;
   height: 250px;
-  background: url('images/skiing-banner.jpg') center/cover no-repeat;
+  background: url('images/hero-ski.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,6 +334,79 @@ main {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
 }
+
+/* Epic Assistant Section */
+.epic-assistant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Improved Epic Assistant Search Bar */
+.assistant-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.assistant-search input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+}
+
+.assistant-search input:focus {
+  outline: none;
+}
+
+.assistant-search img {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+
+/* Digital Pass & Tickets Section */
+.pass-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Pass Card UI - Revised */
+.pass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Increase Pass Image Size in Pass Card */
+.pass-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/*--------------------------------------------------------------
+# Rewards Page Enhancements
+--------------------------------------------------------------*/
 
 /* Progress Dashboard */
 .progress-dashboard {
