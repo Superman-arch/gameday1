@@ -1,17 +1,12 @@
-/* Global Resets */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* General Styling */
 body {
   font-family: Arial, sans-serif;
   color: #003366;
-  background: #fff;
+  background: #f9f9f9;
   line-height: 1.6;
 }
 
-/* Header Content */
+/* Header */
 .header-content {
   padding: 1rem;
   background-color: #87cefa;
@@ -37,44 +32,80 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-  width: 100%;
-  height: 250px;
-  background: url('images/vail-banner.jpg') center/cover no-repeat;
+  background: url('../images/vail-banner.jpg') center/cover no-repeat;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: white;
   font-size: 2rem;
-  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Vail Details Section */
+/* Experience Sections */
 .vail-details {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
-.vail-details h2 {
-  margin-top: 20px;
-  font-size: 1.5rem;
+.experience {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
 }
-.vail-details p {
-  margin: 10px 0;
+.experience:hover {
+  transform: scale(1.03);
+}
+.experience-img {
+  width: 40%;
+  object-fit: cover;
+}
+.experience-info {
+  padding: 20px;
+  width: 60%;
+}
+.experience-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.experience-info p {
   font-size: 1rem;
+  color: #444;
+}
+
+/* Call-to-Action Button */
+.action-btn {
+  display: block;
+  background: #ff7f00;
+  color: white;
+  padding: 12px;
+  margin: 20px auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  width: 200px;
+  transition: background 0.3s;
+}
+.action-btn:hover {
+  background: #e66a00;
 }
 
 /* Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  background: #fff;
-  border-top: 2px solid #ccc;
-  padding: 12px;
-  width: 100%;
   position: fixed;
   bottom: 0;
-  left: 0;
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-top: 2px solid #ccc;
 }
 .bottom-nav ul {
   display: flex;
@@ -96,3 +127,16 @@ body {
   border-bottom: 3px solid #ff7f00;
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .experience {
+    flex-direction: column;
+  }
+  .experience-img {
+    width: 100%;
+  }
+  .experience-info {
+    width: 100%;
+    padding: 15px;
+  }
+}
