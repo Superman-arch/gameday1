@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Epic App – Rewards | In Partnership with Epic Resorts</title>
   <meta name="description" content="Earn and redeem exclusive rewards with My Epic App. Track your progress, unlock achievements, and enjoy special discounts on Epic Resorts experiences.">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/rewards.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
   <header>
     <div class="header-content">
-      <h1 style="color: var(--primary-orange);">My Epic Rewards</h1>
+      <h1 style="color: #ff7f00;">My Epic Rewards</h1>
       <div class="profile-info">
         <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
         <span class="greeting">Welcome, Deca!</span>
@@ -23,12 +23,10 @@
     </div>
   </header>
 
-  <!-- Hero Banner Section -->
   <div class="hero-banner" role="banner">
     <h2>Unlock Your Mountain Rewards</h2>
   </div>
 
-  <!-- Progress Dashboard -->
   <section class="progress-dashboard" aria-label="Progress Dashboard">
     <div class="points-display">
       <span id="pointsValue">1000</span> pts
@@ -38,23 +36,19 @@
     </div>
   </section>
 
-  <!-- Reward Cards Section -->
   <section class="reward-cards" aria-label="Available Rewards">
-    <!-- Reward Card 1: Mountain Resort Discount -->
     <article class="reward-card">
       <img src="images/mountain1.png" alt="Mountain Resort Discount" class="reward-img">
       <h2>Mountain Resort Discount</h2>
       <p>Get 15% off your next lodging at Mountain Resort.</p>
       <button class="action-btn redeem-btn" data-cost="500" data-reward="Mountain Resort Discount" aria-label="Redeem Mountain Resort Discount for 500 points">Redeem Now</button>
     </article>
-    <!-- Reward Card 2: Snow Valley Discount -->
     <article class="reward-card">
       <img src="images/mountain2.jpg" alt="Snow Valley Discount" class="reward-img">
       <h2>Snow Valley Discount</h2>
       <p>Enjoy 20% off on your next season pass at Snow Valley.</p>
       <button class="action-btn redeem-btn" data-cost="750" data-reward="Snow Valley Discount" aria-label="Redeem Snow Valley Discount for 750 points">Redeem Now</button>
     </article>
-    <!-- Reward Card 3: Exclusive Perks -->
     <article class="reward-card">
       <img src="images/extra-perks.jpg" alt="Exclusive Perks" class="reward-img">
       <h2>Exclusive Perks</h2>
@@ -63,7 +57,6 @@
     </article>
   </section>
 
-  <!-- Achievements Section -->
   <section class="achievements-section" aria-label="Your Achievements">
     <h2>Your Achievements</h2>
     <div class="achievements-grid">
@@ -82,7 +75,6 @@
     </div>
   </section>
 
-  <!-- Bottom Navigation Bar -->
   <nav class="bottom-nav" aria-label="Main Navigation">
     <ul>
       <li><a href="home.html">Home</a></li>
@@ -92,6 +84,6 @@
     </ul>
   </nav>
 
-  <script src="js/auth.js?v=3"></script>
+  <script src="js/rewards.js"></script>
 </body>
 </html>
