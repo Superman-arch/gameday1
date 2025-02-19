@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Epic App – Rewards | In Partnership with Epic Resorts</title>
-  <meta name="description" content="Earn and redeem exclusive rewards with My Epic App. Track your progress, unlock achievements, and enjoy special discounts on Epic Resorts experiences.">
+  <title>Gameday Rewards | In Partnership with Epic Resorts</title>
+  <meta name="description" content="Earn and redeem exclusive rewards with Gameday. Track your progress, unlock achievements, and enjoy special discounts on Epic Resorts experiences.">
   <link rel="stylesheet" href="css/rewards.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
+
   <header>
     <div class="header-content">
-      <h1 style="color: #ff7f00;">My Epic Rewards</h1>
+      <h1 style="color: #ff7f00;">Gameday Rewards</h1>
       <div class="profile-info">
         <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
         <span class="greeting">Welcome, Deca!</span>
@@ -23,59 +24,64 @@
     </div>
   </header>
 
-  <div class="hero-banner" role="banner">
+  <div class="hero-banner">
     <h2>Unlock Your Mountain Rewards</h2>
   </div>
 
-  <section class="progress-dashboard" aria-label="Progress Dashboard">
-    <div class="points-display">
-      <span id="pointsValue">1000</span> pts
+  <section class="progress-dashboard">
+    <div class="points-container">
+      <p><strong>Points:</strong> <span id="pointsValue">1000</span> pts</p>
     </div>
     <div class="progress-container">
-      <div class="progress-bar" style="width: 0%;">0 pts</div>
+      <div class="progress-bar" id="progressBar">0 pts</div>
+    </div>
+    <div class="tier-indicator">
+      <span>Bronze</span>
+      <span>Silver</span>
+      <span>Gold</span>
     </div>
   </section>
 
-  <section class="reward-cards" aria-label="Available Rewards">
+  <section class="reward-cards">
     <article class="reward-card">
       <img src="images/mountain1.png" alt="Mountain Resort Discount" class="reward-img">
-      <h2>Mountain Resort Discount</h2>
-      <p>Get 15% off your next lodging at Mountain Resort.</p>
-      <button class="action-btn redeem-btn" data-cost="500" data-reward="Mountain Resort Discount" aria-label="Redeem Mountain Resort Discount for 500 points">Redeem Now</button>
+      <h2>15% Off Lodging</h2>
+      <p>Use 500 points to unlock 15% off your next stay at a Mountain Resort.</p>
+      <button class="action-btn redeem-btn" data-cost="500" data-reward="Mountain Resort Discount">Redeem</button>
     </article>
     <article class="reward-card">
       <img src="images/mountain2.jpg" alt="Snow Valley Discount" class="reward-img">
-      <h2>Snow Valley Discount</h2>
-      <p>Enjoy 20% off on your next season pass at Snow Valley.</p>
-      <button class="action-btn redeem-btn" data-cost="750" data-reward="Snow Valley Discount" aria-label="Redeem Snow Valley Discount for 750 points">Redeem Now</button>
+      <h2>20% Off Season Pass</h2>
+      <p>Unlock 20% off on your next season pass for 750 points.</p>
+      <button class="action-btn redeem-btn" data-cost="750" data-reward="Snow Valley Discount">Redeem</button>
     </article>
     <article class="reward-card">
       <img src="images/extra-perks.jpg" alt="Exclusive Perks" class="reward-img">
-      <h2>Exclusive Perks</h2>
-      <p>Unlock VIP experiences on the slopes with bonus rewards.</p>
-      <button class="action-btn" onclick="window.location.href='vail-details.html';" aria-label="View Exclusive Perks Details">View Details</button>
+      <h2>VIP Mountain Perks</h2>
+      <p>Gain exclusive access to premium resort experiences.</p>
+      <button class="action-btn" onclick="window.location.href='vail-details.html';">View Details</button>
     </article>
   </section>
 
-  <section class="achievements-section" aria-label="Your Achievements">
+  <section class="achievements-section">
     <h2>Your Achievements</h2>
     <div class="achievements-grid">
       <article class="achievement-card">
-        <img src="images/achivement.png" alt="First Run Completed Badge" class="achievement-img">
+        <img src="images/achievement.png" alt="First Run Completed" class="achievement-img">
         <p>First Run Completed</p>
       </article>
       <article class="achievement-card">
-        <img src="images/achivement.png" alt="5 Mountain Feedbacks Badge" class="achievement-img">
+        <img src="images/achievement.png" alt="5 Mountain Feedbacks" class="achievement-img">
         <p>5 Mountain Feedbacks</p>
       </article>
       <article class="achievement-card">
-        <img src="images/achivement.png" alt="Social Connector Badge" class="achievement-img">
-        <p>Social Connector Badge</p>
+        <img src="images/achievement.png" alt="Social Connector" class="achievement-img">
+        <p>Social Connector</p>
       </article>
     </div>
   </section>
 
-  <nav class="bottom-nav" aria-label="Main Navigation">
+  <nav class="bottom-nav">
     <ul>
       <li><a href="home.html">Home</a></li>
       <li><a href="resort.html">Resort</a></li>
