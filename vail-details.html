@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vail Resort Details – Food &amp; Experiences | In Partnership with Epic Resorts</title>
-  <meta name="description" content="Explore Vail Resort's exclusive food, dining, and on-mountain experiences. Enjoy gourmet dining, guided tours, and special offers available to Epic App members.">
+  <title>Vail Resort Details – Food & Experiences | In Partnership with Epic Resorts</title>
+  <meta name="description" content="Explore Vail Resort's exclusive food, dining, and on-mountain experiences. Enjoy gourmet dining, guided tours, and special offers available to Gameday members.">
   <link rel="stylesheet" href="css/vail-details.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 <body>
+
   <header>
     <div class="header-content">
-      <h1 style="color: #ff7f00;">Vail Resort Experiences</h1>
+      <h1>Vail Resort Experiences</h1>
       <p class="partner-tagline">
         In Partnership with 
         <img src="images/logo.png" alt="Epic Resorts Logo" class="partner-logo">
@@ -23,23 +24,41 @@
     </div>
   </header>
 
-  <div class="hero-banner" role="banner">
+  <div class="hero-banner">
     <h2>Discover Vail's Best</h2>
   </div>
 
   <main>
-    <section class="vail-details" aria-label="Vail Resort Details">
-      <h2>Food &amp; Dining</h2>
-      <p>Experience gourmet dining on the slopes. Vail Resorts offers exclusive discounts on select restaurants featuring locally sourced ingredients and diverse culinary options to suit every palate.</p>
-      <h2>On-Mountain Experiences</h2>
-      <p>From guided mountain tours to off-piste adventures, enjoy exclusive experiences designed to make your visit unforgettable. Book your next adventure with special discounts available only to Epic App members.</p>
-      <h2>Exclusive Offers</h2>
-      <p>Unlock special offers on ski rentals, lessons, and spa treatments. Enjoy luxury and adventure at unbeatable values exclusively for our members.</p>
-      <button class="action-btn" onclick="window.location.href='rewards.html';" aria-label="Back to Rewards">Back to Rewards</button>
+    <section class="vail-details">
+      <div class="experience">
+        <img src="images/food.jpg" alt="Vail Dining" class="experience-img">
+        <div class="experience-info">
+          <h2>Food & Dining</h2>
+          <p>Experience gourmet dining on the slopes. Vail Resorts offers exclusive discounts on select restaurants featuring locally sourced ingredients and diverse culinary options.</p>
+        </div>
+      </div>
+
+      <div class="experience">
+        <img src="images/mountain-tour.jpg" alt="Guided Tours" class="experience-img">
+        <div class="experience-info">
+          <h2>On-Mountain Experiences</h2>
+          <p>From guided mountain tours to off-piste adventures, enjoy exclusive experiences designed to make your visit unforgettable. Book your next adventure with special discounts available only to Gameday members.</p>
+        </div>
+      </div>
+
+      <div class="experience">
+        <img src="images/spa.jpg" alt="Exclusive Offers" class="experience-img">
+        <div class="experience-info">
+          <h2>Exclusive Offers</h2>
+          <p>Unlock special offers on ski rentals, lessons, and spa treatments. Enjoy luxury and adventure at unbeatable values exclusively for our members.</p>
+        </div>
+      </div>
+
+      <button class="action-btn" onclick="window.location.href='rewards.html';">Back to Rewards</button>
     </section>
   </main>
 
-  <nav class="bottom-nav" aria-label="Main Navigation">
+  <nav class="bottom-nav">
     <ul>
       <li><a href="home.html">Home</a></li>
       <li><a href="resort.html">Resort</a></li>
