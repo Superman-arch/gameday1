@@ -1,78 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Epic App – Home | In Partnership with Epic Resorts</title>
-  <meta name="description" content="Experience the ultimate gamified ski adventure with My Epic App in partnership with Epic Resorts. Track your days on the slopes, access exclusive rewards, and more.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/favicon.png" type="image/png">
-</head>
-<body>
-  <header>
-    <div class="header-left">
-      <h1 class="app-title">My Epic App</h1>
-    </div>
-    <div class="header-right">
-      <!-- Profile picture and personalized greeting -->
-      <img src="images/deca.png" alt="Deca's Profile Picture" class="profile-pic">
-      <span class="greeting">Welcome, Deca</span>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Banner -->
-    <div class="hero-banner">
-      Unlock the Mountain – Your Skiing Adventure Starts Here!
-    </div>
-
-    <!-- Homepage Container using CSS Grid -->
-    <div class="homepage-container">
-      <!-- Days Tracked Section (spanning full width) -->
-      <section class="days-tracked">
-        <h2>Days Tracked</h2>
-        <button id="trackDaysBtn">Track Your Day</button>
-      </section>
-
-      <!-- Epic Assistant Section (Left Side) -->
-      <section class="epic-assistant">
-        <div class="assistant-header">
-          <img src="images/ai.png" alt="Epic Assistant Icon" class="assistant-icon">
-          <h2>My Epic Assistant</h2>
-        </div>
-        <div class="assistant-search">
-          <input type="text" placeholder="Ask My Epic Assistant..." aria-label="Ask My Epic Assistant">
-          <img src="images/search-icon.png" alt="Search Icon">
-        </div>
-      </section>
-
-      <!-- Digital Pass & Tickets Section (Right Side) -->
-      <section class="pass-tickets">
-        <h2>My Pass &amp; Tickets</h2>
-        <div class="pass-card">
-          <div class="pass-details">
-            <p class="season">Season 24/25</p>
-            <p class="pass-title">EPIC LOCAL PASS</p>
-            <p class="user-name">Deca</p>
-          </div>
-          <div class="pass-status">
-            <img src="images/checkmark.png" alt="Valid Pass Checkmark" class="checkmark-icon">
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <!-- Bottom Navigation Bar -->
-  <nav class="bottom-nav" aria-label="Main Navigation">
-    <ul>
-      <li><a href="home.html" class="active">Home</a></li>
-      <li><a href="resort.html">Resort</a></li>
-      <li><a href="rewards.html">Rewards</a></li>
-      <li><a href="more.html">More</a></li>
-    </ul>
-  </nav>
-
-  <script src="js/auth.js"></script>
-</body>
-</html>
+"use strict";
+document.addEventListener("DOMContentLoaded", () => {
+  const trackDaysBtn = document.getElementById("trackDaysBtn");
+  if (trackDaysBtn) {
+    trackDaysBtn.addEventListener("click", () => {
+      alert("Your day has been tracked!");
+      console.info("Track day button clicked.");
+    });
+  }
+});
