@@ -5,28 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Epic App – Login | In Partnership with Vail Resorts</title>
   <meta name="description" content="Login to My Epic App, your gateway to exclusive rewards and experiences on the slopes, in partnership with Epic Resorts.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="icon" href="images/icon.png" type="image/png">
-  <!-- CSS Variables can be defined in style.css, e.g.:
-    :root {
-      --primary-orange: #FF7F00;
-      --dark-blue: #003366;
-      --light-blue: #87CEFA;
-      --white: #fff;
-      --gray: #ccc;
-    }
-  -->
 </head>
 <body>
-  <!-- Full-screen background image with an overlay -->
   <div class="background-container" style="background-image: url('images/background.jpg');">
     <div class="overlay"></div>
   </div>
 
   <header>
     <div class="header-inner">
-      <!-- Epic logo styled with your primary orange accent -->
-      <h1 class="logo" style="color: var(--primary-orange);">Epic</h1>
+      <h1 class="logo" style="color: #ff7f00;">Epic</h1>
       <p class="partner-tagline">
         In Partnership with 
         <img src="images/logo.png" alt="Epic Resorts Logo" class="partner-logo">
@@ -39,7 +28,6 @@
     <section class="login-section">
       <div class="login-card" role="form" aria-labelledby="loginFormTitle">
         <h3 id="loginFormTitle" class="visually-hidden">Login to My Epic App</h3>
-        <!-- Login Form -->
         <form id="loginForm" action="#" method="post" novalidate>
           <div class="form-group">
             <label for="email">Email</label>
@@ -47,7 +35,6 @@
           </div>
           <div class="form-group">
             <label for="password">Password</label>
-            <!-- Container for the password input and embedded Face ID icon -->
             <div class="password-container">
               <input type="password" id="password" name="password" placeholder="Enter your password" required aria-required="true">
               <img src="images/faceid.png" alt="Face ID Icon" class="faceid-icon">
@@ -57,21 +44,17 @@
             <a href="#" class="forgot-link">Forgot Username?</a>
             <a href="#" class="forgot-link">Forgot Password?</a>
           </div>
-          <!-- The SIGN IN button; enabled via CSS/JS when inputs are valid -->
           <button type="submit" id="signInBtn" disabled>SIGN IN</button>
         </form>
-
         <div class="extra-options">
           <a href="#" class="option-link">Sign up</a>
-          <!-- Guest login redirects directly to home.html -->
           <a href="home.html" class="option-link">Continue as Guest</a>
         </div>
-        <!-- Container for error messages (populated via JavaScript) -->
         <p id="errorMsg" aria-live="assertive"></p>
       </div>
     </section>
   </main>
 
-  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
