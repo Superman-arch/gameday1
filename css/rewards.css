@@ -4,7 +4,7 @@ body {
   color: #003366;
   background: #f9f9f9;
   line-height: 1.6;
-  text-align: center; /* Keeps content centered */
+  text-align: center;
 }
 img {
   max-width: 100%;
@@ -35,24 +35,24 @@ img {
 
 /* Fixing the Rewards Page Logo */
 .rewards-logo {
-  max-width: 300px; /* Restricts max size */
+  max-width: 300px;  /* Strict size limit */
   height: auto;
   display: block;
   margin: 20px auto;
-  object-fit: contain; /* Ensures proper scaling */
+  object-fit: contain;
 }
 
 /* Responsive Fix for Large Screens */
 @media (min-width: 1024px) {
   .rewards-logo {
-    max-width: 250px; /* Smaller on large screens */
+    max-width: 250px;
   }
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .rewards-logo {
-    max-width: 200px; /* Ensures proper mobile scaling */
+    max-width: 200px;
     width: 90%;
   }
 }
@@ -114,17 +114,21 @@ img {
   padding: 20px;
   margin-bottom: 50px;
 }
+
+/* Fixing the Reward Card Layout */
 .reward-card {
   display: flex;
-  flex-direction: column; /* Stacks content */
-  justify-content: space-between; /* Ensures button stays at the bottom */
+  flex-direction: column;  /* Ensures proper stacking */
+  justify-content: space-between;  /* Ensures button stays at bottom */
   background: white;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s;
-  min-height: 250px; /* Prevents card from being too short */
+  min-height: 320px;  /* Ensures enough space for content */
+  height: auto;
+  flex-grow: 1;  /* Allows it to expand when needed */
 }
 .reward-card:hover {
   transform: scale(1.05);
@@ -134,18 +138,18 @@ img {
   border-radius: 4px;
 }
 
-/* Fix the Button Placement */
+/* Fix the "View Details" Button */
 .action-btn {
   display: block;
   background: #ff7f00;
   color: white;
   padding: 12px;
-  margin-top: auto; /* Pushes button to bottom */
+  margin-top: auto;  /* Forces it to stay at the bottom */
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
-  width: 100%; /* Ensures button stays inside */
+  width: 100%;  /* Ensures full width */
 }
 .action-btn:hover {
   background: #e66a00;
@@ -201,6 +205,6 @@ img {
     padding: 12px;
   }
   .reward-card {
-    min-height: 300px; /* Gives extra space for content */
+    min-height: 350px;  /* Adds more space */
   }
 }
