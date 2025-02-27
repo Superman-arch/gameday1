@@ -4,7 +4,7 @@ body {
   color: #003366;
   background: #f9f9f9;
   line-height: 1.6;
-  text-align: center; /* Ensures consistent text alignment */
+  text-align: center; /* Keep content centered */
 }
 img {
   max-width: 100%;
@@ -33,6 +33,29 @@ img {
   margin-right: 0.5rem;
 }
 
+/* Fixing the Rewards Page Logo */
+.rewards-logo {
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .rewards-logo {
+    max-width: 250px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .rewards-logo {
+    max-width: 200px;
+    width: 90%;
+  }
+}
+
 /* Hero Banner */
 .hero-banner {
   background: url('../images/ski-banner.jpg') center/cover no-repeat;
@@ -45,30 +68,7 @@ img {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-/* Fixing the Rewards Page Logo */
-.rewards-logo {
-  max-width: 400px;  /* Restricts size */
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
-/* Responsive Fix for Large Screens */
-@media (min-width: 1024px) {
-  .rewards-logo {
-    max-width: 250px; /* Smaller on larger screens */
-  }
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .rewards-logo {
-    max-width: 200px; /* Even smaller on mobile */
-    width: 90%;
-  }
-}
-
-/* Progress Section */
+/* Progress Section Fix */
 .progress-dashboard {
   text-align: center;
   padding: 1.5rem;
@@ -143,7 +143,7 @@ img {
   background: #e66a00;
 }
 
-/* Bottom Navigation (Fixed & Unified) */
+/* Fix for the Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
@@ -169,6 +169,8 @@ img {
   color: #003366;
   padding: 10px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+  text-align: center;
 }
 .bottom-nav a.active,
 .bottom-nav a:hover {
@@ -185,7 +187,7 @@ img {
     height: 20px;
   }
   .bottom-nav {
-    padding: 15px; /* Ensures better touch spacing */
+    padding: 15px;
   }
   .bottom-nav a {
     padding: 12px;
