@@ -35,10 +35,26 @@ img {
 
 /* Fixing the Rewards Page Logo */
 .rewards-logo {
-  max-width: 400px;
+  max-width: 300px;  /* Strict maximum size */
   height: auto;
   display: block;
   margin: 20px auto;
+  object-fit: contain; /* Ensures it scales without distortion */
+}
+
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .rewards-logo {
+    max-width: 250px; /* Smaller on larger screens */
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .rewards-logo {
+    max-width: 200px; /* Even smaller on mobile */
+    width: 90%;
+  }
 }
 
 /* Responsive Fix for Large Screens */
