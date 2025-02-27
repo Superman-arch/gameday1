@@ -4,6 +4,11 @@ body {
   color: #003366;
   background: #f9f9f9;
   line-height: 1.6;
+  text-align: center; /* Ensures consistent text alignment */
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -38,6 +43,29 @@ body {
   color: white;
   font-size: 1.8rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Fixing the Rewards Page Logo */
+.rewards-logo {
+  max-width: 400px;  /* Restricts size */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .rewards-logo {
+    max-width: 250px; /* Smaller on larger screens */
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .rewards-logo {
+    max-width: 200px; /* Even smaller on mobile */
+    width: 90%;
+  }
 }
 
 /* Progress Section */
@@ -115,15 +143,25 @@ body {
   background: #e66a00;
 }
 
-/* Bottom Navigation */
+/* Bottom Navigation (Fixed & Unified) */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+  border-top: 2px solid #ccc;
+  padding: 12px;
+  width: 100%;
   position: fixed;
   bottom: 0;
+  left: 0;
+}
+.bottom-nav ul {
+  display: flex;
   width: 100%;
-  background: white;
-  padding: 10px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
 }
 .bottom-nav a {
   text-decoration: none;
@@ -132,8 +170,8 @@ body {
   padding: 10px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
-.bottom-nav a:hover,
-.bottom-nav a.active {
+.bottom-nav a.active,
+.bottom-nav a:hover {
   color: #ff7f00;
   border-bottom: 3px solid #ff7f00;
 }
@@ -145,5 +183,11 @@ body {
   }
   .progress-bar {
     height: 20px;
+  }
+  .bottom-nav {
+    padding: 15px; /* Ensures better touch spacing */
+  }
+  .bottom-nav a {
+    padding: 12px;
   }
 }
