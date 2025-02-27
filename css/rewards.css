@@ -176,26 +176,27 @@ img {
   transform: translateY(-2px);
 }
 
-/* Bottom Navigation */
+/* Unified Bottom Navigation */
 .bottom-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: #fff;
-  border-top: 2px solid #ccc;
-  padding: 12px;
+  border-top: 1px solid #ccc;
+  padding: 8px 0;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.1);
 }
 
 .bottom-nav ul {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -203,7 +204,7 @@ img {
   text-decoration: none;
   font-weight: bold;
   color: #003366;
-  padding: 10px;
+  padding: 6px 8px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
   display: block;
   text-align: center;
@@ -212,7 +213,7 @@ img {
 .bottom-nav a.active,
 .bottom-nav a:hover {
   color: #ff7f00;
-  border-bottom: 3px solid #ff7f00;
+  border-bottom: 2px solid #ff7f00;
 }
 
 /* Mobile Responsiveness */
@@ -225,10 +226,10 @@ img {
     line-height: 20px;
   }
   .bottom-nav {
-    padding: 15px;
+    padding: 8px 0;
   }
   .bottom-nav a {
-    padding: 12px;
+    padding: 6px 8px;
   }
   .reward-card {
     min-height: 350px;
