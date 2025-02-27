@@ -13,21 +13,17 @@ body {
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
   padding: 1rem;
   background-color: #87cefa;
+  text-align: center;
 }
-.logo {
-  width: 150px;
+.header-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .partner-tagline {
-  display: flex;
-  align-items: center;
-}
-.partner-tagline img {
-  margin-left: 5px;
-  height: 40px;
+  font-size: 1.2rem;
+  color: #003366;
 }
 
 /* Menu Sections */
@@ -82,4 +78,3 @@ header {
   color: #ff7f00;
   border-bottom: 3px solid #ff7f00;
 }
-
