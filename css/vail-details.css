@@ -4,6 +4,11 @@ body {
   color: #003366;
   background: #f9f9f9;
   line-height: 1.6;
+  text-align: center; /* Keeps content centered */
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -14,6 +19,7 @@ body {
 }
 .header-content h1 {
   color: #ff7f00;
+  font-size: 1.8rem;
 }
 .partner-tagline {
   margin: 0.5rem 0;
@@ -28,6 +34,30 @@ body {
   height: 40px;
   border-radius: 50%;
   margin-right: 0.5rem;
+}
+
+/* Fixing the Vail Page Logo */
+.vail-logo {
+  max-width: 300px; /* Strict size limit */
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  object-fit: contain;
+}
+
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .vail-logo {
+    max-width: 250px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .vail-logo {
+    max-width: 200px;
+    width: 90%;
+  }
 }
 
 /* Hero Banner */
@@ -50,23 +80,28 @@ body {
 }
 .experience {
   display: flex;
+  flex-direction: column; /* Ensures correct stacking */
   background: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
+  min-height: 320px; /* Ensures enough space */
 }
 .experience:hover {
   transform: scale(1.03);
 }
 .experience-img {
-  width: 40%;
+  width: 100%;
   object-fit: cover;
 }
 .experience-info {
   padding: 20px;
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to bottom */
 }
 .experience-info h2 {
   font-size: 1.5rem;
@@ -77,35 +112,37 @@ body {
   color: #444;
 }
 
-/* Call-to-Action Button */
+/* Fixing the "View Details" Button */
 .action-btn {
   display: block;
   background: #ff7f00;
   color: white;
   padding: 12px;
-  margin: 20px auto;
+  margin-top: auto; /* Pushes button to bottom */
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
   text-align: center;
-  width: 200px;
+  width: 100%;
   transition: background 0.3s;
 }
 .action-btn:hover {
   background: #e66a00;
 }
 
-/* Bottom Navigation */
+/* Bottom Navigation (Fixed & Unified) */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  background: #fff;
+  border-top: 2px solid #ccc;
+  padding: 12px;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  background: white;
-  padding: 10px;
-  border-top: 2px solid #ccc;
+  left: 0;
 }
 .bottom-nav ul {
   display: flex;
@@ -120,9 +157,11 @@ body {
   color: #003366;
   padding: 10px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
+  display: block;
+  text-align: center;
 }
-.bottom-nav a:hover,
-.bottom-nav a.active {
+.bottom-nav a.active,
+.bottom-nav a:hover {
   color: #ff7f00;
   border-bottom: 3px solid #ff7f00;
 }
@@ -138,5 +177,14 @@ body {
   .experience-info {
     width: 100%;
     padding: 15px;
+  }
+  .bottom-nav {
+    padding: 15px;
+  }
+  .bottom-nav a {
+    padding: 12px;
+  }
+  .experience {
+    min-height: 350px; /* Adds more space */
   }
 }
