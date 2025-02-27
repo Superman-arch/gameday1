@@ -1,11 +1,14 @@
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #003366;
   background: #f9f9f9;
   line-height: 1.6;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -13,27 +16,34 @@ img {
 
 /* Header */
 .header-content {
-  padding: 0.8rem;
-  background-color: #87cefa;
+  padding: 1rem 0.8rem;
+  background: linear-gradient(135deg, #87cefa, #6db3f2);
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .header-content h1 {
   color: #ff7f00;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
+
 .profile-info {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 }
+
 .profile-info .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 0.5rem;
+  border: 2px solid #ff7f00;
 }
 
-/* Fixing the Rewards Page Logo */
+/* Rewards Logo */
 .rewards-logo {
   max-width: 300px;  /* Strict size limit */
   height: auto;
@@ -60,32 +70,37 @@ img {
 /* Hero Banner */
 .hero-banner {
   background: url('../images/ski-banner.jpg') center/cover no-repeat;
-  height: 180px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
 }
 
-/* Progress Section Fix */
+/* Progress Section */
 .progress-dashboard {
   text-align: center;
   padding: 1.5rem;
 }
+
 .points-container {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 10px;
 }
+
 .progress-container {
   width: 100%;
   max-width: 400px;
-  background: #ccc;
+  background: #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   margin: 10px auto;
 }
+
 .progress-bar {
   height: 25px;
   width: 0%;
@@ -95,67 +110,73 @@ img {
   color: #fff;
   font-weight: bold;
   font-size: 1rem;
+  line-height: 25px;
 }
+
 .tier-indicator {
   display: flex;
   justify-content: space-between;
   max-width: 400px;
-  margin: auto;
+  margin: 10px auto 0;
   font-weight: bold;
   color: #003366;
-  margin-top: 5px;
 }
 
 /* Rewards Section */
 .reward-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 15px;
+  gap: 20px;
   padding: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 70px; /* extra bottom margin for navigation */
 }
 
-/* Fixing the Reward Card Layout */
+/* Reward Card */
 .reward-card {
   display: flex;
-  flex-direction: column;  /* Ensures proper stacking */
-  justify-content: space-between;  /* Ensures button stays at bottom */
-  background: white;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  min-height: 320px;  /* Ensures enough space for content */
-  height: auto;
-  flex-grow: 1;  /* Allows it to expand when needed */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 320px;
 }
+
 .reward-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
+
 .reward-img {
   width: 100%;
   border-radius: 4px;
+  margin-bottom: 15px;
 }
 
-/* Fix the "View Details" Button */
+/* "View Details" Button */
 .action-btn {
   display: block;
   background: #ff7f00;
-  color: white;
+  color: #fff;
   padding: 12px;
-  margin-top: auto;  /* Forces it to stay at the bottom */
+  margin-top: auto;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
-  width: 100%;  /* Ensures full width */
-}
-.action-btn:hover {
-  background: #e66a00;
+  width: 100%;
+  transition: background 0.3s, transform 0.2s;
 }
 
-/* Bottom Navigation (Fixed & Unified) */
+.action-btn:hover {
+  background: #e66a00;
+  transform: translateY(-2px);
+}
+
+/* Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
@@ -167,7 +188,9 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
+
 .bottom-nav ul {
   display: flex;
   width: 100%;
@@ -175,6 +198,7 @@ img {
   list-style: none;
   padding: 0;
 }
+
 .bottom-nav a {
   text-decoration: none;
   font-weight: bold;
@@ -184,6 +208,7 @@ img {
   display: block;
   text-align: center;
 }
+
 .bottom-nav a.active,
 .bottom-nav a:hover {
   color: #ff7f00;
@@ -197,6 +222,7 @@ img {
   }
   .progress-bar {
     height: 20px;
+    line-height: 20px;
   }
   .bottom-nav {
     padding: 15px;
@@ -205,6 +231,6 @@ img {
     padding: 12px;
   }
   .reward-card {
-    min-height: 350px;  /* Adds more space */
+    min-height: 350px;
   }
 }
