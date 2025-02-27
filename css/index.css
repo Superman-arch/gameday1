@@ -11,6 +11,25 @@ body {
   line-height: 1.6;
 }
 
+/* Responsive Image Fix */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Specific rule for the partner logo image */
+.partner-logo {
+  max-width: 150px;  /* adjust as needed */
+  height: auto;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .partner-logo {
+    max-width: 100px;
+  }
+}
+
 /* Background & Overlay */
 .background-container {
   position: fixed;
