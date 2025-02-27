@@ -72,10 +72,20 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100vh;  /* Centers the login card vertically on larger screens */
   position: relative;
   z-index: 1;
 }
+
+/* Adjust vertical spacing for mobile devices */
+@media (max-width: 600px) {
+  .login-section {
+    min-height: auto;   /* Allow the section to adjust based on its content */
+    padding: 1rem 0;    /* Add vertical padding as needed */
+    align-items: flex-start; /* Align items to the top */
+  }
+}
+
 .login-card {
   background: #fff;
   padding: 2rem;
