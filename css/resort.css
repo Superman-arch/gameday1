@@ -11,6 +11,12 @@ body {
   line-height: 1.6;
 }
 
+/* Global responsive image rule */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Header */
 header {
   padding: 1rem;
@@ -23,6 +29,16 @@ header h1 {
 }
 .partner-tagline {
   margin-bottom: 1rem;
+}
+/* Style for the Vail Resorts logo in the header */
+.partner-logo {
+  max-width: 150px;  /* Adjust for desktop */
+  height: auto;
+}
+@media (max-width: 600px) {
+  .partner-logo {
+    max-width: 100px;  /* Smaller logo on mobile */
+  }
 }
 .close-btn {
   position: absolute;
@@ -64,9 +80,17 @@ header h1 {
   align-items: center;
   justify-content: space-between;
 }
+/* Default size for the resort logo in the card */
 .resort-card img.resort-logo {
   width: 80px;
   height: 80px;
+}
+@media (max-width: 600px) {
+  /* Smaller resort logo for mobile devices */
+  .resort-card img.resort-logo {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 /* Favorite Button */
@@ -80,7 +104,7 @@ header h1 {
   height: 40px;
 }
 
-/* Bottom Navigation (similar to previous pages) */
+/* Bottom Navigation */
 .bottom-nav {
   display: flex;
   justify-content: space-evenly;
@@ -112,4 +136,3 @@ header h1 {
   color: #ff7f00;
   border-bottom: 3px solid #ff7f00;
 }
-
