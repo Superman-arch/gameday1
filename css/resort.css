@@ -32,17 +32,23 @@ header h1 {
 
 /* Fixing the Vail Resorts Logo */
 .resort-logo {
-  max-width: 400px;  /* Limits size on desktop */
-  width: 80%;  /* Prevents it from stretching too much */
+  max-width: 400px;  /* Limits the size */
   height: auto;
   display: block;
   margin: 20px auto;
 }
 
+/* Responsive Fix for Large Screens */
+@media (min-width: 1024px) {
+  .resort-logo {
+    max-width: 250px; /* Smaller on larger screens */
+  }
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .resort-logo {
-    max-width: 250px; /* Smaller on mobile */
+    max-width: 200px; /* Even smaller on mobile */
     width: 90%;
   }
 }
